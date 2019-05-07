@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "limit": {
+            "type": "integer",
+            "default": 50
+        },
+        "category": {
+            "type": "string"
+        },
+        "offset": {
+            "type": "integer",
+            "default": 0
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

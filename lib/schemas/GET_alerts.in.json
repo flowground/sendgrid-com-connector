@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "properties": {
+        "Authorization": {
+            "type": "string"
+        },
+        "requestBody": {
+            "nullable": true
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

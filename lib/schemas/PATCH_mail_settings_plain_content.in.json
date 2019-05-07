@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "enabled": false
+            },
+            "properties": {
+                "enabled": {
+                    "description": "The new setting you would like to use for your Plain Content mail setting.",
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

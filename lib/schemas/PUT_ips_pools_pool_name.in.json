@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "pool_name": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "example": {
+                "name": "new_pool_name"
+            },
+            "properties": {
+                "name": {
+                    "description": "The new name for your IP pool.",
+                    "maxLength": 64,
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

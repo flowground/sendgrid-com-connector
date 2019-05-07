@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "properties": {
+        "date": {
+            "required": true,
+            "type": "string"
+        },
+        "subuser": {
+            "required": false,
+            "type": "string"
+        },
+        "sort_by_metric": {
+            "required": false,
+            "type": "string",
+            "default": "delivered"
+        },
+        "sort_by_direction": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "desc",
+                "asc"
+            ],
+            "default": "desc"
+        },
+        "limit": {
+            "required": false,
+            "type": "integer",
+            "default": 5
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        }
+    }
+}

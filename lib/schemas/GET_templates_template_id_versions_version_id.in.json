@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "version_id": {
+            "required": true,
+            "type": "string"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

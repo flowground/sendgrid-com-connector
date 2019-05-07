@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "list_id": {
+            "required": true,
+            "type": "integer"
+        },
+        "recipient_id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "nullable": true
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "type": "object",
+    "properties": {
+        "limit": {
+            "required": false,
+            "type": "integer"
+        },
+        "offset": {
+            "required": false,
+            "type": "integer"
+        },
+        "aggregated_by": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "day",
+                "week",
+                "month"
+            ]
+        },
+        "start_date": {
+            "required": true,
+            "type": "string"
+        },
+        "end_date": {
+            "required": false,
+            "type": "string",
+            "default": "The date the request is made."
+        },
+        "country": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "US",
+                "CA"
+            ]
+        },
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "default": "Bearer <<apiKey>>"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

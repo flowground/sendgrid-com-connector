@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "Authorization": {
+            "required": true,
+            "type": "string",
+            "default": "Bearer <<apiKey>>"
+        },
+        "requestBody": {
+            "description": "The IP addresses you would like to assign to the subuser.",
+            "example": [
+                "127.0.0.1"
+            ],
+            "items": {
+                "format": "ipv4",
+                "type": "string"
+            },
+            "type": "array"
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "campaign_id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "example": {
+                "send_at": 1489771528
+            },
+            "properties": {
+                "send_at": {
+                    "description": "The unix timestamp for the date and time you would like your campaign to be sent out.",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "send_at"
+            ],
+            "title": "Schedule a Campaign request",
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "recipient_emails": [
+                    "exists1@example.com",
+                    "exists2@example.com",
+                    "doesnotexists@example.com"
+                ]
+            },
+            "properties": {
+                "recipient_emails": {
+                    "description": "The list of email address that you want to search the suppression group for.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "recipient_emails"
+            ],
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

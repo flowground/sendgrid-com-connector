@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+        "email_address": {
+            "required": true,
+            "type": "string",
+            "format": "email"
+        },
+        "requestBody": {
+            "nullable": true
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

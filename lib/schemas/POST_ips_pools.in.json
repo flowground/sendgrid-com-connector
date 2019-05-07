@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "name": "marketing"
+            },
+            "properties": {
+                "name": {
+                    "description": "The name of your new IP pool.",
+                    "maxLength": 64,
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "type": "object"
+        }
+    }
+}

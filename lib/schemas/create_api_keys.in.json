@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "name": "My API Key",
+                "sample": "data",
+                "scopes": [
+                    "mail.send",
+                    "alerts.create",
+                    "alerts.read"
+                ]
+            },
+            "properties": {
+                "name": {
+                    "description": "The name you will use to describe this API Key.",
+                    "type": "string"
+                },
+                "sample": {
+                    "type": "string"
+                },
+                "scopes": {
+                    "description": "The individual permissions that you are giving to this API Key.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": [
+                {
+                    "age": 25,
+                    "email": "example@example.com",
+                    "first_name": "",
+                    "last_name": "User"
+                },
+                {
+                    "age": 25,
+                    "email": "example2@example.com",
+                    "first_name": "Example",
+                    "last_name": "User"
+                }
+            ],
+            "items": {
+                "properties": {
+                    "age": {
+                        "type": "integer"
+                    },
+                    "email": {
+                        "description": "The email address of the recipient.",
+                        "format": "email",
+                        "type": "string"
+                    },
+                    "first_name": {
+                        "description": "The first name of the recipient.",
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "description": "The last name of the recipient.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "email"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

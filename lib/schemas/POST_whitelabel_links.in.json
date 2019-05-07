@@ -1,0 +1,47 @@
+{
+    "type": "object",
+    "properties": {
+        "limit": {
+            "type": "integer",
+            "default": 50
+        },
+        "offset": {
+            "type": "integer",
+            "default": 0
+        },
+        "requestBody": {
+            "example": {
+                "default": true,
+                "domain": "example.com",
+                "subdomain": "mail"
+            },
+            "properties": {
+                "default": {
+                    "description": "Indicates if you want to use this link whitelabel as the fallback, or default, whitelabel.",
+                    "enum": [
+                        true,
+                        false
+                    ],
+                    "type": "boolean"
+                },
+                "domain": {
+                    "description": "The root domain for your subdomain that you are creating the whitelabel for. This should match your FROM email address.",
+                    "type": "string"
+                },
+                "subdomain": {
+                    "description": "The subdomain to create the link whitelabel for. Must be different from the subdomain you used for a domain whitelabel.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "domain",
+                "subdomain"
+            ],
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

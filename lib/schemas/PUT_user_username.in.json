@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "username": "test_username"
+            },
+            "properties": {
+                "username": {
+                    "description": "The new username you would like to use for your account.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

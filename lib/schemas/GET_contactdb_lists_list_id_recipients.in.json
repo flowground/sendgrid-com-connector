@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "page": {
+            "required": false,
+            "type": "integer"
+        },
+        "page_size": {
+            "required": false,
+            "type": "integer"
+        },
+        "list_id": {
+            "required": true,
+            "type": "integer"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

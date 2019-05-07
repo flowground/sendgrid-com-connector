@@ -1,0 +1,15 @@
+{
+    "name": "sendgrid-com-connector",
+    "version": "3.0.0",
+    "description": "# The SendGrid Web API V3 Documentation\n\nThis is the entirety of the documented v3 endpoints. We have updated all the descriptions, parameters, requests, and responses.\n\n## Authentication \n\nEvery endpoint requires Authentication in the form of an Authorization Header:\n\nAuthorization: Bearer API_KEY",
+    "main": "component.json",
+    "dependencies": {
+        "elasticio-node": "0.0.9",
+        "elasticio-sailor-nodejs": "^2.2.1",
+        "swagger-client": "^3.8.22"
+    },
+    "author": {
+        "name": "Deutsche Telekom AG"
+    },
+    "license": "Apache-2.0"
+}

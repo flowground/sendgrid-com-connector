@@ -1,0 +1,61 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "automatic_security": false,
+                "custom_spf": true,
+                "default": true,
+                "domain": "example.com",
+                "ips": [
+                    "192.168.1.1",
+                    "192.168.1.2"
+                ],
+                "subdomain": "news",
+                "username": "john@example.com"
+            },
+            "properties": {
+                "automatic_security": {
+                    "description": "Whether to allow SendGrid to manage your SPF records, DKIM keys, and DKIM key rotation.",
+                    "type": "boolean"
+                },
+                "custom_spf": {
+                    "description": "Specify whether to use a custom SPF or allow SendGrid to manage your SPF. This option is only available to domain whitelabels setup for manual security.",
+                    "type": "boolean"
+                },
+                "default": {
+                    "description": "Whether to use this whitelabel as the fallback if no domain whitelabels match the sender's domain.",
+                    "type": "boolean"
+                },
+                "domain": {
+                    "description": "Domain being whitelabeled.",
+                    "type": "string"
+                },
+                "ips": {
+                    "description": "The IP addresses that will be included in the custom SPF record for this whitelabel.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "subdomain": {
+                    "description": "The subdomain to use for this domain whitelabel.",
+                    "type": "string"
+                },
+                "username": {
+                    "description": "The username that this whitelabel will be associated with.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "domain",
+                "subdomain"
+            ],
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "properties": {
+        "pool_name": {
+            "required": true,
+            "type": "string"
+        },
+        "ip": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "nullable": true
+        }
+    }
+}

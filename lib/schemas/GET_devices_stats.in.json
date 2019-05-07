@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "end_date": {
+            "required": false,
+            "type": "string"
+        },
+        "limit": {
+            "required": false,
+            "type": "integer"
+        },
+        "offset": {
+            "required": false,
+            "type": "integer"
+        },
+        "aggregated_by": {
+            "required": false,
+            "type": "string"
+        },
+        "start_date": {
+            "required": true,
+            "type": "string"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

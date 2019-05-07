@@ -1,0 +1,46 @@
+{
+    "type": "object",
+    "properties": {
+        "Authorization": {
+            "type": "string"
+        },
+        "requestBody": {
+            "example": {
+                "email_to": "example@example.com",
+                "frequency": "daily",
+                "type": "stats_notification"
+            },
+            "properties": {
+                "email_to": {
+                    "description": "The email address the alert will be sent to.\nExample: test@example.com",
+                    "type": "string",
+                    "nullable": true
+                },
+                "frequency": {
+                    "description": "Required for stats_notification. How frequently the alert will be sent.\nExample: daily",
+                    "type": "string"
+                },
+                "percentage": {
+                    "description": "Required for usage_alert. When this usage threshold is reached, the alert will be sent.\nExample: 90",
+                    "type": "integer"
+                },
+                "type": {
+                    "description": "The type of alert you want to create. Can be either usage_limit or stats_notification.\nExample: usage_limit",
+                    "enum": [
+                        "stats_notification",
+                        "usage_limit"
+                    ],
+                    "type": "string"
+                }
+            },
+            "required": [
+                "type",
+                "email_to"
+            ],
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string"
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+        "_field_name_": {
+            "type": "string"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

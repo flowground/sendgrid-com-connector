@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "email_to": "example@example.com"
+            },
+            "properties": {
+                "email_to": {
+                    "description": "The new email address you want your alert to be sent to.\nExample: test@example.com",
+                    "type": "string"
+                },
+                "frequency": {
+                    "description": "The new frequency at which to send the stats_notification alert.\nExample: monthly",
+                    "type": "string"
+                },
+                "percentage": {
+                    "description": "The new percentage threshold at which the usage_limit alert will be sent.\nExample: 90",
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

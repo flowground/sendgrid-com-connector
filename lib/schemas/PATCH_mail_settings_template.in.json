@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "enabled": true,
+                "html_content": "<% body %>"
+            },
+            "properties": {
+                "enabled": {
+                    "description": "Indicates if you want to enable the legacy email template mail setting.",
+                    "type": "boolean"
+                },
+                "html_content": {
+                    "description": "The new HTML content for your legacy email template.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "items": {
+                "type": "integer"
+            },
+            "type": "array"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

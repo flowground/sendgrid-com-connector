@@ -1,0 +1,94 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "conditions": [
+                    {
+                        "and_or": "",
+                        "field": "last_name",
+                        "operator": "eq",
+                        "value": "Miller"
+                    },
+                    {
+                        "and_or": "and",
+                        "field": "last_clicked",
+                        "operator": "gt",
+                        "value": "01/02/2015"
+                    },
+                    {
+                        "and_or": "or",
+                        "field": "clicks.campaign_identifier",
+                        "operator": "eq",
+                        "value": "513"
+                    }
+                ],
+                "list_id": 4,
+                "name": "Last Name Miller"
+            },
+            "properties": {
+                "conditions": {
+                    "description": "The conditions for a recipient to be included in this segment.",
+                    "items": {
+                        "properties": {
+                            "and_or": {
+                                "enum": [
+                                    "and",
+                                    "or",
+                                    ""
+                                ],
+                                "type": "string"
+                            },
+                            "field": {
+                                "type": "string"
+                            },
+                            "operator": {
+                                "enum": [
+                                    "eq",
+                                    "ne",
+                                    "lt",
+                                    "gt",
+                                    "contains"
+                                ],
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "field",
+                            "value",
+                            "operator"
+                        ],
+                        "title": "ContactDB: Segments: Conditions",
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "list_id": {
+                    "description": "The list id from which to make this segment. Not including this ID will mean your segment is created from the main contactdb rather than a list.",
+                    "type": "integer"
+                },
+                "name": {
+                    "description": "The name of this segment.",
+                    "type": "string"
+                },
+                "recipient_count": {
+                    "description": "The count of recipients in this list. This is not included on creation of segments.",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "name",
+                "conditions"
+            ],
+            "title": "Create a Segment request",
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

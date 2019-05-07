@@ -1,0 +1,42 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "email": "teammate1@example.com",
+                "is_admin": false,
+                "scopes": [
+                    "user.profile.read",
+                    "user.profile.update"
+                ]
+            },
+            "properties": {
+                "email": {
+                    "description": "New teammate's email",
+                    "maxLength": 255,
+                    "minLength": 5,
+                    "pattern": "^.*@.*\\..*",
+                    "type": "string"
+                },
+                "is_admin": {
+                    "default": false,
+                    "description": "Set to true if teammate should be an admin user",
+                    "type": "boolean"
+                },
+                "scopes": {
+                    "description": "Set to specify list of scopes that teammate should have. Should be empty if teammate is an admin.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "email",
+                "scopes",
+                "is_admin"
+            ],
+            "type": "object"
+        }
+    }
+}

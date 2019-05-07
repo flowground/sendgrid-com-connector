@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "properties": {
+        "limit": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 500,
+            "default": 500
+        },
+        "offset": {
+            "type": "integer",
+            "minimum": 0,
+            "default": 0
+        }
+    }
+}

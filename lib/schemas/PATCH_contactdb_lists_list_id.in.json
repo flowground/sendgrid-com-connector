@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "list_id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "example": {
+                "name": "newlistname"
+            },
+            "properties": {
+                "name": {
+                    "description": "The new name for your list. ",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "title": "Update a List request",
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

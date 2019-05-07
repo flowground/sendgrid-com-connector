@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "url": "url"
+            },
+            "properties": {
+                "url": {
+                    "description": "The URL where you would like the test notification to be sent.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

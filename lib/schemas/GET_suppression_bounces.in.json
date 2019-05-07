@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "start_time": {
+            "type": "integer"
+        },
+        "end_time": {
+            "type": "integer"
+        },
+        "Accept": {
+            "required": true,
+            "type": "string",
+            "default": "application/json"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

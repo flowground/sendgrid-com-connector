@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "username": "jane@example.com"
+            },
+            "properties": {
+                "username": {
+                    "description": "The username of the subuser account that you want to associate the link whitelabel with.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

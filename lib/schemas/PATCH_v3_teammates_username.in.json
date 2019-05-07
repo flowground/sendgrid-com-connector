@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+        "username": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "example": {
+                "is_admin": false,
+                "scopes": [
+                    "user.profile.read",
+                    "user.profile.edit"
+                ]
+            },
+            "properties": {
+                "is_admin": {
+                    "description": "Set to True if this teammate should be promoted to an admin user. If True, scopes should be an empty array.",
+                    "type": "boolean"
+                },
+                "scopes": {
+                    "description": "Provide list of scopes that should be given to teammate. If specifying list of scopes, is_admin should be set to False.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "scopes",
+                "is_admin"
+            ],
+            "type": "object"
+        }
+    }
+}

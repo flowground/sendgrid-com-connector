@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "start_date": {
+            "required": true,
+            "type": "string"
+        },
+        "end_date": {
+            "required": false,
+            "type": "string"
+        },
+        "categories": {
+            "required": true,
+            "type": "string"
+        },
+        "limit": {
+            "required": false,
+            "type": "integer",
+            "maximum": 500,
+            "default": 500
+        },
+        "offset": {
+            "required": false,
+            "type": "integer"
+        },
+        "aggregated_by": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "day",
+                "week",
+                "month"
+            ]
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

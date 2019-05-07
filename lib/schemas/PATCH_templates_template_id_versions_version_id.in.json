@@ -1,0 +1,45 @@
+{
+    "type": "object",
+    "properties": {
+        "version_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "example": {
+                "active": 1,
+                "html_content": "<%body%>",
+                "name": "updated_example_name",
+                "plain_content": "<%body%>",
+                "subject": "<%subject%>"
+            },
+            "properties": {
+                "active": {
+                    "description": "Indicates if the template version is active.",
+                    "type": "integer"
+                },
+                "html_content": {
+                    "description": "The HTML content of the template version.",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "The name of the template version.",
+                    "type": "string"
+                },
+                "plain_content": {
+                    "description": "The text/plain content of the template version.",
+                    "type": "string"
+                },
+                "subject": {
+                    "description": "The subject of the template version.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

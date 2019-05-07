@@ -1,0 +1,37 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "description": "Suggestions for products our users might like.",
+                "is_default": true,
+                "name": "Product Suggestions"
+            },
+            "properties": {
+                "description": {
+                    "description": "A brief description of your new suppression group.",
+                    "maxLength": 100,
+                    "type": "string"
+                },
+                "is_default": {
+                    "description": "Indicates if you would like this to be your default suppression group.",
+                    "type": "boolean"
+                },
+                "name": {
+                    "description": "The name that you would like to use for your new suppression group.",
+                    "maxLength": 30,
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "description"
+            ],
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

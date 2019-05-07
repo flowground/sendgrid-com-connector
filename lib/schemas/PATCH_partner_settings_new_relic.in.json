@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "enable_subuser_statistics": true,
+                "enabled": true,
+                "license_key": ""
+            },
+            "properties": {
+                "enable_subuser_statistics": {
+                    "description": "Indicates if your subuser statistics will be sent to your New Relic Dashboard.",
+                    "type": "boolean"
+                },
+                "enabled": {
+                    "description": "Indicates if this partner setting is enabled.",
+                    "type": "boolean"
+                },
+                "license_key": {
+                    "description": "The license key for your New Relic account.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

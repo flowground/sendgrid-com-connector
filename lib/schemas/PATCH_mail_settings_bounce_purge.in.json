@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "enabled": true,
+                "hard_bounces": 5,
+                "soft_bounces": 5
+            },
+            "properties": {
+                "enabled": {
+                    "description": "Indicates if the bounce purge mail setting is enabled.",
+                    "type": "boolean"
+                },
+                "hard_bounces": {
+                    "description": "The number of days, after which SendGrid will purge all contacts from your hard bounces suppression lists.",
+                    "type": "integer",
+                    "nullable": true
+                },
+                "soft_bounces": {
+                    "description": "The number of days, after which SendGrid will purge all contacts from your soft bounces suppression lists.",
+                    "type": "integer",
+                    "nullable": true
+                }
+            },
+            "title": "Mail Settings: Bounce Purge",
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

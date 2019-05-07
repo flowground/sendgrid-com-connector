@@ -1,0 +1,97 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "bounce": true,
+                "click": true,
+                "deferred": true,
+                "delivered": true,
+                "dropped": true,
+                "enabled": true,
+                "group_resubscribe": true,
+                "group_unsubscribe": true,
+                "open": true,
+                "processed": true,
+                "spam_report": true,
+                "unsubscribe": true,
+                "url": "url"
+            },
+            "properties": {
+                "bounce": {
+                    "description": "Receiving server could not or would not accept message.",
+                    "type": "boolean"
+                },
+                "click": {
+                    "description": "Recipient clicked on a link within the message. You need to enable Click Tracking for getting this type of event.",
+                    "type": "boolean"
+                },
+                "deferred": {
+                    "description": "Recipient's email server temporarily rejected message.",
+                    "type": "boolean"
+                },
+                "delivered": {
+                    "description": "Message has been successfully delivered to the receiving server.",
+                    "type": "boolean"
+                },
+                "dropped": {
+                    "description": "You may see the following drop reasons: Invalid SMTPAPI header, Spam Content (if spam checker app enabled), Unsubscribed Address, Bounced Address, Spam Reporting Address, Invalid, Recipient List over Package Quota",
+                    "type": "boolean"
+                },
+                "enabled": {
+                    "description": "Indicates if the event webhook is enabled.",
+                    "type": "boolean"
+                },
+                "group_resubscribe": {
+                    "description": "Recipient resubscribes to specific group by updating preferences. You need to enable Subscription Tracking for getting this type of event.",
+                    "type": "boolean"
+                },
+                "group_unsubscribe": {
+                    "description": "Recipient unsubscribe from specific group, by either direct link or updating preferences. You need to enable Subscription Tracking for getting this type of event.",
+                    "type": "boolean"
+                },
+                "open": {
+                    "description": "Recipient has opened the HTML message. You need to enable Open Tracking for getting this type of event.",
+                    "type": "boolean"
+                },
+                "processed": {
+                    "description": "Message has been received and is ready to be delivered.",
+                    "type": "boolean"
+                },
+                "spam_report": {
+                    "description": "Recipient marked a message as spam.",
+                    "type": "boolean"
+                },
+                "unsubscribe": {
+                    "description": "Recipient clicked on message's subscription management link. You need to enable Subscription Tracking for getting this type of event.",
+                    "type": "boolean"
+                },
+                "url": {
+                    "description": "The URL that you want the event webhook to POST to.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "enabled",
+                "url",
+                "group_resubscribe",
+                "delivered",
+                "group_unsubscribe",
+                "spam_report",
+                "bounce",
+                "deferred",
+                "unsubscribe",
+                "processed",
+                "open",
+                "click",
+                "dropped"
+            ],
+            "title": "Webhooks: Event Webhook Settings",
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "pool_name": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "example": {
+                "ip": "0.0.0.0"
+            },
+            "properties": {
+                "ip": {
+                    "description": "The IP address that you want to add to an IP pool.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

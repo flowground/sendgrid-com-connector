@@ -1,0 +1,78 @@
+{
+    "type": "object",
+    "properties": {
+        "segment_id": {
+            "type": "string"
+        },
+        "requestBody": {
+            "example": {
+                "conditions": [
+                    {
+                        "and_or": "",
+                        "field": "last_name",
+                        "operator": "eq",
+                        "value": "Miller"
+                    }
+                ],
+                "list_id": 5,
+                "name": "The Millers"
+            },
+            "properties": {
+                "conditions": {
+                    "description": "The conditions by which this segment should be created.",
+                    "items": {
+                        "properties": {
+                            "and_or": {
+                                "enum": [
+                                    "and",
+                                    "or",
+                                    ""
+                                ],
+                                "type": "string"
+                            },
+                            "field": {
+                                "type": "string"
+                            },
+                            "operator": {
+                                "enum": [
+                                    "eq",
+                                    "ne",
+                                    "lt",
+                                    "gt",
+                                    "contains"
+                                ],
+                                "type": "string"
+                            },
+                            "value": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "field",
+                            "value",
+                            "operator"
+                        ],
+                        "title": "ContactDB: Segments: Conditions",
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "list_id": {
+                    "description": "The list ID you would like this segment to be built from.",
+                    "type": "number"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

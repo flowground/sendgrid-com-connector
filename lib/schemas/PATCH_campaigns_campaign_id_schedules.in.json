@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "campaign_id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "example": {
+                "send_at": 1489451436
+            },
+            "properties": {
+                "send_at": {
+                    "format": "int64",
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "send_at"
+            ],
+            "title": "Update a Scheduled Campaign request",
+            "type": "object"
+        }
+    }
+}

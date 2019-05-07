@@ -1,0 +1,47 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "enabled": true,
+                "html_content": "html content",
+                "landing": "landing page html",
+                "plain_content": "text content",
+                "replace": "replacement tag",
+                "url": "url"
+            },
+            "properties": {
+                "enabled": {
+                    "description": "Indicates if subscription tracking is enabled.",
+                    "type": "boolean"
+                },
+                "html_content": {
+                    "description": "The information and HTML for your unsubscribe link. ",
+                    "type": "string"
+                },
+                "landing": {
+                    "description": "The HTML that will be displayed on the page that your customers will see after clicking unsubscribe, hosted on SendGrid’s server.",
+                    "type": "string"
+                },
+                "plain_content": {
+                    "description": "The information in plain text for your unsubscribe link. You should have the “<% %>” tag in your content, otherwise the user will have no URL for unsubscribing.",
+                    "type": "string"
+                },
+                "replace": {
+                    "description": "Your custom defined replacement tag for your templates. Use this tag to place your unsubscribe content anywhere in your emailtemplate.",
+                    "type": "string"
+                },
+                "url": {
+                    "description": "The URL where you would like your users sent to unsubscribe.",
+                    "type": "string"
+                }
+            },
+            "title": "Settings: Subscription Tracking",
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

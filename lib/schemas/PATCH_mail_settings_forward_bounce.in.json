@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "email": "example@example.com",
+                "enabled": true
+            },
+            "properties": {
+                "email": {
+                    "description": "The email address that you would like your bounce reports forwarded to.",
+                    "type": "string",
+                    "nullable": true
+                },
+                "enabled": {
+                    "description": "Indicates if the bounce forwarding mail setting is enabled.",
+                    "type": "boolean"
+                }
+            },
+            "title": "Mail Settings: Forward Bounce",
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

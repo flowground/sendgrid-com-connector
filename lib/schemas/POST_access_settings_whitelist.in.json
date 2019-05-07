@@ -1,0 +1,46 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "ips": [
+                    {
+                        "ip": "192.168.1.1"
+                    },
+                    {
+                        "ip": "192.*.*.*"
+                    },
+                    {
+                        "ip": "192.168.1.3/32"
+                    }
+                ]
+            },
+            "properties": {
+                "ips": {
+                    "description": "An array containing the IP(s) you want to whitelist.",
+                    "items": {
+                        "properties": {
+                            "ip": {
+                                "description": "An IP address that you want to whitelist.",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "ip"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "ips"
+            ],
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

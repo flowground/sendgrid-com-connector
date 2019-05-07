@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+        "campaign_id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "nullable": true
+        }
+    }
+}

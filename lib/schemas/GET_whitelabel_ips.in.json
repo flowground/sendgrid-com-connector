@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "limit": {
+            "type": "integer"
+        },
+        "offset": {
+            "type": "integer"
+        },
+        "ip": {
+            "type": "string"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

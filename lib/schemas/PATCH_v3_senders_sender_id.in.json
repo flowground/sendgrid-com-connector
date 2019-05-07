@@ -1,0 +1,85 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "address": "123 Elm St.",
+                "address_2": "Apt. 456",
+                "city": "Denver",
+                "country": "United States",
+                "from": {
+                    "email": "from@example.com",
+                    "name": "Example INC"
+                },
+                "nickname": "My Sender ID",
+                "reply_to": {
+                    "email": "replyto@example.com",
+                    "name": "Example INC"
+                },
+                "state": "Colorado",
+                "zip": "80202"
+            },
+            "properties": {
+                "address": {
+                    "description": "The physical address of the sender identity.",
+                    "type": "string"
+                },
+                "address_2": {
+                    "description": "Additional sender identity address information.",
+                    "type": "string"
+                },
+                "city": {
+                    "description": "The city of the sender identity.",
+                    "type": "string"
+                },
+                "country": {
+                    "description": "The country of the sender identity.",
+                    "type": "string"
+                },
+                "from": {
+                    "properties": {
+                        "email": {
+                            "description": "This is where the email will appear to originate from for your recipient",
+                            "type": "string"
+                        },
+                        "name": {
+                            "description": "This is the name appended to the from email field. IE - Your name or company name.",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "nickname": {
+                    "description": "A nickname for the sender identity. Not used for sending.",
+                    "type": "string"
+                },
+                "reply_to": {
+                    "properties": {
+                        "email": {
+                            "description": "This is the email that your recipient will reply to.",
+                            "type": "string"
+                        },
+                        "name": {
+                            "description": "This is the name appended to the reply to email field. IE - Your name or company name.",
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "state": {
+                    "description": "The state of the sender identity.",
+                    "type": "string"
+                },
+                "zip": {
+                    "description": "The zipcode of the sender identity.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

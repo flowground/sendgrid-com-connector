@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "subuser_name": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "example": {
+                "email": "example@example.com",
+                "frequency": 50000
+            },
+            "properties": {
+                "email": {
+                    "description": "The email address to send emails at the frequency specified for monitoring.",
+                    "format": "email",
+                    "type": "string"
+                },
+                "frequency": {
+                    "description": "The frequency by which to send the emails. An email will be sent, every time your subuser sends this {frequency} emails. ",
+                    "type": "number"
+                }
+            },
+            "required": [
+                "email",
+                "frequency"
+            ],
+            "title": "Create monitor settings request",
+            "type": "object"
+        }
+    }
+}

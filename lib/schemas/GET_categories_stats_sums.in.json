@@ -1,0 +1,50 @@
+{
+    "type": "object",
+    "properties": {
+        "sort_by_metric": {
+            "required": false,
+            "type": "string",
+            "default": "delivered"
+        },
+        "sort_by_direction": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "desc",
+                "asc"
+            ],
+            "default": "desc"
+        },
+        "start_date": {
+            "required": true,
+            "type": "string"
+        },
+        "end_date": {
+            "required": false,
+            "type": "string"
+        },
+        "limit": {
+            "required": false,
+            "type": "integer",
+            "default": 5
+        },
+        "offset": {
+            "required": false,
+            "type": "integer",
+            "default": 0
+        },
+        "aggregated_by": {
+            "required": false,
+            "type": "string",
+            "enum": [
+                "day",
+                "week",
+                "month"
+            ]
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

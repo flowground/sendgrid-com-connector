@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+        "list_id": {
+            "type": "integer"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

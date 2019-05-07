@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "name": "new_example_name"
+            },
+            "properties": {
+                "name": {
+                    "description": "The name of the transactional template.",
+                    "maxLength": 100,
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

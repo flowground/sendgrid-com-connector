@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "delete_all": false,
+                "emails": [
+                    "example1@example.com",
+                    "example2@example.com"
+                ]
+            },
+            "properties": {
+                "delete_all": {
+                    "description": "Indicates if you want to delete all email addresses on the spam report list.",
+                    "type": "boolean"
+                },
+                "emails": {
+                    "description": "A list of specific email addresses that you want to remove from the spam report list.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "enabled": true,
+                "list": [
+                    "email1@example.com",
+                    "example.com"
+                ]
+            },
+            "properties": {
+                "enabled": {
+                    "description": "Indicates if your email address whitelist is enabled.",
+                    "type": "boolean"
+                },
+                "list": {
+                    "description": "Either a single email address that you want whitelisted or a domain, for which all email addresses belonging to this domain will be whitelisted.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

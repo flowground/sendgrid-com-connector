@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "delete_all": false,
+                "emails": [
+                    "example1@example.com",
+                    "example2@example.com"
+                ]
+            },
+            "properties": {
+                "delete_all": {
+                    "description": "Indicates if you want to delete all blocked email addresses.",
+                    "type": "boolean"
+                },
+                "emails": {
+                    "description": "The specific blocked email addresses that you want to delete.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

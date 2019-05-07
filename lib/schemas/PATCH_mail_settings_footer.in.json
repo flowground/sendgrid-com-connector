@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "enabled": true,
+                "html_content": "...",
+                "plain_content": "..."
+            },
+            "properties": {
+                "enabled": {
+                    "description": "Indicates if the Footer mail setting is currently enabled.",
+                    "type": "boolean"
+                },
+                "html_content": {
+                    "description": "The custom HTML content of your email footer.",
+                    "type": "string"
+                },
+                "plain_content": {
+                    "description": "The plain text content of your email footer.",
+                    "type": "string"
+                }
+            },
+            "title": "Mail Settings: Footer",
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

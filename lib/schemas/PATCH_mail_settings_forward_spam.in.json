@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "email": "",
+                "enabled": false
+            },
+            "properties": {
+                "email": {
+                    "description": "The email address where you would like the spam reports to be forwarded.",
+                    "type": "string"
+                },
+                "enabled": {
+                    "description": "Indicates if the Forward Spam setting is enabled.",
+                    "type": "boolean"
+                }
+            },
+            "title": "Mail Settings: Forward Spam",
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "delete_all": true,
+                "emails": [
+                    "example@example.com",
+                    "example2@example.com"
+                ]
+            },
+            "properties": {
+                "delete_all": {
+                    "description": "This parameter allows you to delete **every** email in your bounce list. This should not be used with the emails parameter.",
+                    "type": "boolean"
+                },
+                "emails": {
+                    "description": "Delete multiple emails from your bounce list at the same time. This should not be used with the delete_all parameter.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

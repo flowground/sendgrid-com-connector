@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "properties": {
+        "version_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "nullable": true
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

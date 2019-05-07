@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+        "ip": {
+            "type": "string"
+        },
+        "exclude_whitelabels": {
+            "type": "boolean"
+        },
+        "limit": {
+            "type": "integer",
+            "default": 10
+        },
+        "offset": {
+            "type": "integer",
+            "default": 0
+        },
+        "subuser": {
+            "type": "string"
+        },
+        "sort_by_direction": {
+            "type": "string",
+            "enum": [
+                "desc",
+                "asc"
+            ]
+        }
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "batch_id": "YOUR_BATCH_ID",
+                "status": "pause"
+            },
+            "properties": {
+                "batch_id": {
+                    "description": "The batch ID is the identifier that your scheduled mail sends share.",
+                    "pattern": "^[a-zA-Z0-9]",
+                    "type": "string"
+                },
+                "status": {
+                    "default": "pause",
+                    "description": "The status of the send you would like to implement. This can be pause or cancel. To delete a pause or cancel status see DELETE /v3/user/scheduled_sends/{batch_id}",
+                    "enum": [
+                        "pause",
+                        "cancel"
+                    ],
+                    "type": "string"
+                }
+            },
+            "required": [
+                "batch_id",
+                "status"
+            ],
+            "title": "Cancel or pause a scheduled send request",
+            "type": "object"
+        }
+    }
+}

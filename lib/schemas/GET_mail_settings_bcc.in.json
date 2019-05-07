@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "properties": {
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

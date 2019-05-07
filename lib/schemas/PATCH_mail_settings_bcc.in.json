@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "email": "email@example.com",
+                "enabled": false
+            },
+            "properties": {
+                "email": {
+                    "description": "The email address of the recipient.",
+                    "type": "string"
+                },
+                "enabled": {
+                    "description": "Indicates if the mail setting is enabled.",
+                    "type": "boolean"
+                }
+            },
+            "title": "Mail Settings: Patch",
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

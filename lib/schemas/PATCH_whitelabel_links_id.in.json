@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "default": true
+            },
+            "properties": {
+                "default": {
+                    "description": "Indicates if the link whitelabel is set as the default, or fallback, whitelabel.",
+                    "enum": [
+                        true,
+                        false
+                    ],
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

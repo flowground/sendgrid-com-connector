@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "recipient_emails": [
+                    "test1@example.com",
+                    "test2@example.com"
+                ]
+            },
+            "properties": {
+                "recipient_emails": {
+                    "description": "The email address, or addresses, that you want to add to the global suppressions group.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

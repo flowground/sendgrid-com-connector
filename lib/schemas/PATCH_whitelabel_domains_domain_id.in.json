@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "custom_spf": true,
+                "default": false
+            },
+            "properties": {
+                "custom_spf": {
+                    "default": false,
+                    "description": "Indicates whether to generate a custom SPF record for manual security.",
+                    "type": "boolean"
+                },
+                "default": {
+                    "default": false,
+                    "description": "Indicates whether this domain whitelabel should be considered the default.",
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

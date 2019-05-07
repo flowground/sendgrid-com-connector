@@ -1,0 +1,46 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "email": "John@example.com",
+                "ips": [
+                    "1.1.1.1",
+                    "2.2.2.2"
+                ],
+                "password": "johns_password",
+                "username": "John@example.com"
+            },
+            "properties": {
+                "email": {
+                    "description": "The email address of the subuser.",
+                    "format": "email",
+                    "type": "string"
+                },
+                "ips": {
+                    "description": "The IP addresses that should be assigned to this subuser.",
+                    "items": {
+                        "format": "ipv4",
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "password": {
+                    "description": "The password this subuser will use when logging into SendGrid.",
+                    "type": "string"
+                },
+                "username": {
+                    "description": "The username for this subuser.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "username",
+                "email",
+                "password",
+                "ips"
+            ],
+            "type": "object"
+        }
+    }
+}

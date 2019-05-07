@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+        "subuser_name": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "nullable": true
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "subuser_name": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "example": {
+                "disabled": false
+            },
+            "properties": {
+                "disabled": {
+                    "description": "Whether or not this subuser is disabled. True means disabled, False means enabled.",
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "ids": [
+                    1,
+                    2,
+                    3
+                ]
+            },
+            "properties": {
+                "ids": {
+                    "description": "An array of the IDs of the IP address that you want to remove from your whitelist.",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

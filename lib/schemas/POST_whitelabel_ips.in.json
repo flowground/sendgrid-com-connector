@@ -1,0 +1,36 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "domain": "example.com",
+                "ip": "192.168.1.1",
+                "subdomain": "email"
+            },
+            "properties": {
+                "domain": {
+                    "description": "The root, or sending, domain that will be used to send message from the IP.",
+                    "type": "string"
+                },
+                "ip": {
+                    "description": "The IP address that you want to whitelabel.",
+                    "type": "string"
+                },
+                "subdomain": {
+                    "description": "The subdomain that will be used to send emails from the IP. Should be the same as the subdomain used for your domain whitelabel.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "ip",
+                "subdomain",
+                "domain"
+            ],
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

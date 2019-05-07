@@ -1,0 +1,34 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "enabled": true,
+                "max_score": 5,
+                "url": "url"
+            },
+            "properties": {
+                "enabled": {
+                    "description": "Indicates if you want the spam check mail setting to be enabled or not.",
+                    "type": "boolean"
+                },
+                "max_score": {
+                    "default": 5,
+                    "description": "The new max score, or spam threshold that you would like to set for the spam checker.",
+                    "maximum": 10,
+                    "minimum": 1,
+                    "type": "integer"
+                },
+                "url": {
+                    "description": "The Inbound Parse URL where you would like your spam reports to be sent to.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

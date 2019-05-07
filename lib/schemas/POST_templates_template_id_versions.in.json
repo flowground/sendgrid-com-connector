@@ -1,0 +1,59 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "active": 1,
+                "html_content": "<%body%>",
+                "name": "example_version_name",
+                "plain_content": "<%body%>",
+                "subject": "<%subject%>",
+                "template_id": "ddb96bbc-9b92-425e-8979-99464621b543"
+            },
+            "properties": {
+                "active": {
+                    "description": "Set the new version as the active version associated with the template. Only one version of a template can be active. The first version created for a template will automatically be set to Active.",
+                    "enum": [
+                        0,
+                        1
+                    ],
+                    "type": "integer"
+                },
+                "html_content": {
+                    "description": "The HTML content of the new version. Must include <%body%> tag. Maximum of 1048576 bytes allowed for plain content.",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "Name of the new transactional template version.",
+                    "type": "string"
+                },
+                "plain_content": {
+                    "description": "Text/plain content of the new transactional template version. Must include <%body%> tag. Maximum of 1048576 bytes allowed for plain content.",
+                    "type": "string"
+                },
+                "subject": {
+                    "description": "Subject of the new transactional template version. Must include <%subject%> tag.",
+                    "type": "string"
+                },
+                "template_id": {
+                    "description": "The name of the original transactional template.",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "template_id",
+                "active",
+                "name",
+                "html_content",
+                "plain_content",
+                "subject"
+            ],
+            "title": "Transactional Templates: Version",
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

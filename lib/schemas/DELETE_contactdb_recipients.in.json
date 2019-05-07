@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": [
+                "recipient_id1",
+                "recipient_id2"
+            ],
+            "items": {
+                "type": "string"
+            },
+            "type": "array"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

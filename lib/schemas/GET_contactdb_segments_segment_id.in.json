@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "segment_id": {
+            "required": true,
+            "type": "integer"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

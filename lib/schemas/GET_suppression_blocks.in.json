@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "start_time": {
+            "type": "integer"
+        },
+        "end_time": {
+            "type": "integer"
+        },
+        "limit": {
+            "type": "integer"
+        },
+        "offset": {
+            "type": "integer"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

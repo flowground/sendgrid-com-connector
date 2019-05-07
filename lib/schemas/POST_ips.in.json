@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "count": 90323478,
+                "subusers": [
+                    "subuser1",
+                    "subuser2"
+                ],
+                "user_can_send": true,
+                "warmup": true
+            },
+            "properties": {
+                "count": {
+                    "description": "The amount of IPs to add to the account.",
+                    "type": "integer"
+                },
+                "subusers": {
+                    "description": "Array of usernames to be assigned a send IP.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "warmup": {
+                    "default": false,
+                    "description": "Whether or not to warmup the IPs being added.",
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "count"
+            ],
+            "type": "object"
+        }
+    }
+}

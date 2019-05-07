@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+        "campaign_id": {
+            "required": true,
+            "type": "integer"
+        },
+        "requestBody": {
+            "example": {
+                "to": "your.email@example.com"
+            },
+            "properties": {
+                "to": {
+                    "description": "The email address that should receive the test campaign.",
+                    "format": "email",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "to"
+            ],
+            "type": "object"
+        }
+    }
+}

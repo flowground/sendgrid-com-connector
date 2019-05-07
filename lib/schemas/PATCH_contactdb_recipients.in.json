@@ -1,0 +1,39 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": [
+                {
+                    "email": "jones@example.com",
+                    "first_name": "Guy",
+                    "last_name": "Jones"
+                }
+            ],
+            "items": {
+                "properties": {
+                    "email": {
+                        "format": "email",
+                        "type": "string"
+                    },
+                    "first_name": {
+                        "description": "The first name of the recipient. This is one of the default custom fields.",
+                        "type": "string"
+                    },
+                    "last_name": {
+                        "description": "The last name of the recipient. This is one of the default custom fields.",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "email"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}

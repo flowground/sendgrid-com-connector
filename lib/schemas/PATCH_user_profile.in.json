@@ -1,0 +1,64 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "example": {
+                "city": "Orange",
+                "first_name": "Example",
+                "last_name": "User"
+            },
+            "properties": {
+                "address": {
+                    "description": "The street address for this user profile.",
+                    "type": "string"
+                },
+                "address2": {
+                    "description": "An optional second line for the street address of this user profile.",
+                    "type": "string"
+                },
+                "city": {
+                    "description": "The city for the user profile.",
+                    "type": "string"
+                },
+                "company": {
+                    "description": "That company that this user profile is associated with.",
+                    "type": "string"
+                },
+                "country": {
+                    "description": "Th country of this user profile.",
+                    "type": "string"
+                },
+                "first_name": {
+                    "description": "The first name of the user.",
+                    "type": "string"
+                },
+                "last_name": {
+                    "description": "The last name of the user.",
+                    "type": "string"
+                },
+                "phone": {
+                    "description": "The phone number for the user.",
+                    "type": "string"
+                },
+                "state": {
+                    "description": "The state for this user.",
+                    "type": "string"
+                },
+                "website": {
+                    "description": "The website associated with this user.",
+                    "type": "string"
+                },
+                "zip": {
+                    "description": "The zip code for this user.",
+                    "type": "string"
+                }
+            },
+            "title": "User: Profile",
+            "type": "object"
+        },
+        "on_behalf_of": {
+            "type": "string",
+            "default": "subuser_<user_name>"
+        }
+    }
+}
